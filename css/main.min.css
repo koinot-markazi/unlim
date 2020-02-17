@@ -3215,8 +3215,67 @@ body .height {
 }
 
 .img-filter {
-  -webkit-filter: greyscale(1) !important;
-          filter: greyscale(1) !important;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.img-filter:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.img-filter-headline {
+  font-size: 18px;
+  font-weight: 600;
+  color: #777777;
+}
+
+.img-filter-headline span {
+  color: #FF0000;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.img-filter-headline span span {
+  font-size: 24px;
+}
+
+.img-filter .red-button {
+  background-color: #FF0000;
+  color: #ffffff;
+}
+
+.img-filter .buy-link-red {
+  font-size: 18px;
+}
+
+.white {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 8888;
+}
+
+.thankyou {
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+.image-thank {
+  display: block;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  margin-top: 20%;
+}
+
+.image-thank .tu-img {
+  margin: auto;
+  display: block;
+  width: 50%;
 }
 
 b,

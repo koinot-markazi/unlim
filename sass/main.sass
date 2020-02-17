@@ -312,7 +312,46 @@ body
 	.small-text
 		font-size: 12px
 .img-filter
-	filter: greyscale(1)!important
+	filter: grayscale(1)
+	&:hover
+		filter: grayscale(0)
+	&-headline
+		font-size: 18px
+		font-weight: 600
+		color: #777777
+		span
+			color: $accent
+			font-weight: 600
+			font-style: italic
+			span
+				font-size: 24px
+	.red-button
+		background-color: $accent
+		color: #ffffff
+	.buy-link-red
+		font-size: 18px
+
+.white
+	background-color: rgba(255,255,255,0.5)
+	position: absolute
+	left: 0
+	top: 0
+	bottom: 0
+	right: 0
+	z-index: 8888
+.thankyou
+	filter: blur(10px)	
+.image-thank
+	display: block
+	width: 100%
+	position: fixed
+	z-index: 9999
+	margin-top: 20%
+	.tu-img
+		margin: auto
+		display: block
+		width: 50%
+
 
 b, strong
 	font-weight: bold
