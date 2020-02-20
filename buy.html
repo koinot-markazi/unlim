@@ -29,16 +29,16 @@
 <body>
 
 	<!-- Custom HTML -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-red">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-red sticky-top">
 		<div class="container">
 			
-			<a class="navbar-brand" href="#"><img src="img/logo.svg" alt=""></a>
+			<a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt=""></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 			</button>
 		
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
+			<ul class="navbar-nav mr-auto mt-4">
 				<li class="nav-item active">
 				<a class="nav-link" href="#">WORLDWIDE DATA <span class="sr-only">(current)</span></a>
 				</li>
@@ -49,10 +49,10 @@
 				<a class="nav-link" href="#">MAP COVERAGE</a>
 				</li>
 			</ul>
-			<form class="form-inline my-2 my-lg-0">
+			<form class="form-inline my-2 mt-lg-3">
 				<input class="unlim-search mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 			</form>
-			<ul class="navbar-nav mr-auto">
+			<ul class="navbar-nav mr-auto mt-4">
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  $ US
@@ -95,18 +95,18 @@
 					<span class="red-line"></span>
                     <h3 class="content-1-headline">1 GB Worldwide data (valid for 30 days)</h3>
                     
-                    <p class="mt-5">Number of periods (1per/30days)</p>
-                    <select name="" id="" class="form-control w-25 mb-5">
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
+                    <p class="mt-5">Number of periods (1per/<span id="change_period">30</span>days)</p>
+                    <select name="" id="number_of_periods_select" class="form-control w-25 mb-5">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
                     </select>
 
                     <p class="text-red mt-5">$ <span class="big-price">646</span> <span class="text-dark">us/month</span></p>
                     <div class="strike">
                         <p class="text-dark mt-2">$ <span class="big-price">646</span> <span class="text-dark">us/month</span></p>
                     </div>
-                    <a href="" class="buy-link-red">BUY IT NOW</a>
+                    <a href="buy-form.html" class="buy-link-red">BUY IT NOW</a>
 
 				</div>
 			</div>
@@ -131,12 +131,7 @@
 							<p>included <span class="round-red">75</span> countries</p>
 						</div>
 						<div class="item">
-							<select name="" id="" class="form-control">
-								<option value="" disabled selected>Enter or choose Gb</option>
-								<option value="">1 Gb</option>
-								<option value="">3 Gb</option>
-								<option value="">5 Gb</option>
-							</select>
+							<input type="number" min="0" class="form-control tarif" placeholder="Enter or choose Gb">
 						</div>
 						<div class="item">
 							<p class="text-red">$ <span class="big-price">646</span> <span class="text-dark">us/month</span></p>

@@ -30,15 +30,16 @@
 <body>
 
 	<!-- Custom HTML -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-red">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-red sticky-top">
 		<div class="container">
+			
 			<a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt=""></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 			</button>
 		
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
+			<ul class="navbar-nav mr-auto mt-4">
 				<li class="nav-item active">
 				<a class="nav-link" href="#">WORLDWIDE DATA <span class="sr-only">(current)</span></a>
 				</li>
@@ -49,10 +50,10 @@
 				<a class="nav-link" href="#">MAP COVERAGE</a>
 				</li>
 			</ul>
-			<form class="form-inline my-2 my-lg-0">
+			<form class="form-inline my-2 mt-lg-3">
 				<input class="unlim-search mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 			</form>
-			<ul class="navbar-nav mr-auto">
+			<ul class="navbar-nav mr-auto mt-4">
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  $ US
@@ -90,41 +91,40 @@
         </div>
         <div class="row">
             <div class="offset-xl-2 offset-lg-2 offset-md-2 col-xl-8 col-lg-8 col-md-8 col-12">
-                <form action="" class="form-group">
+                <form action="" class="form-group form-check">
                     <p>Contact information</p>
-                    <input type="text" class="form-control my-2" placeholder="email">
+                    <input type="email" class="form-control my-2" id="email" placeholder="email" required data-validate>
                     <p class="mt-4">Billing information</p>
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="First name">
+                            <input type="text" class="form-control" id="f_name" placeholder="First name" required data-validate>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Last name">
+                            <input type="text" class="form-control" id="l_name" placeholder="Last name" required data-validate>
                         </div>
                      </div>
-                     <input type="text" class="form-control my-2" placeholder="Address">
-                     <input type="text" class="form-control my-2" placeholder="Apartment, suite, etc.">
-                     <input type="text" class="form-control my-2" placeholder="City">
+                     <input type="text" class="form-control my-2" id="address" placeholder="Address" required data-validate>
+                     <input type="text" class="form-control my-2" id="address_detail" placeholder="Apartment, suite, etc." required data-validate>
+                     <input type="text" class="form-control my-2" id="city" placeholder="City" required data-validate>
                      <div class="row">
                          <div class="col">
-                            <select name="" id="" class="form-control my-2">
+                            <select name="" id="" class="form-control">
                                 <option value="">Ukraine</option>
                                 <option value="">Russia</option>
                                 <option value="">Uzbekistan</option>
                             </select>
                          </div>
                          <div class="col">
-                             <input type="text" class="form-control my-2" placeholder="Post code">
+                             <input type="text" class="form-control" id="post_code" placeholder="Post code" required data-validate>
                          </div>
                      </div>
-                     <input type="text" class="form-control my-2" placeholder="Phone number" id="phoneNumber">
+                     <input type="text" class="form-control my-2" id="phone_number" placeholder="Phone number" id="phoneNumber" required data-validate>
                      <div class="form-check">
 
                          <input type="checkbox" class="form-check-input" id="checker">
                          <label for="checker" class="form-check-label text-secondary">Save this information for the next time</label>
                         </div>
-				</form>
-				<div class="img-filter w-100">
+				<div class="img-filter w-100 mt-5">
 				<div class="row">
 						<div class="col-xl-3 col-lg-3 col-md-3 col-3">
 							<img src="img/icons/plan-red.svg" alt="" class="w-100">
@@ -141,8 +141,11 @@
 						</div>
 					</div>
 					<div class="row">
-						<a href="" class="buy-link-red ml-auto">Continue to payment</a>
+						<input type="submit" class="buy-link-red ml-auto" value="Continue to payment">
+						<!-- <a href="#" class="buy-link-red ml-auto">Continue to payment</a> -->
 					</div>
+				</form>
+
 				</div>
             </div>
         </div>
@@ -187,5 +190,37 @@
 		</div>
 	</div>
 	<script src="js/scripts.min.js"></script>
+	<script>
+
+		var full = false;
+
+		$('.form-check').on("change", function(){
+			var form = $(this);
+			var field = [];
+			form.find('input[data-validate]').each(function(){
+				field.push('input[data-validate]');
+				var value = $(this).val(),
+					line = $(this).closest('.some-form__line');
+
+				for(var i = 0; i < field.length; i++){
+					if(!value){
+						full = false;
+					}
+					else{
+						full = true;
+					}
+				}
+				if(full){
+					$('.img-filter').css('filter', 'grayscale(0)')
+				}
+				else{
+					$('.img-filter').css('filter', 'grayscale(1)')
+				}
+			})
+		})
+
+
+				
+	</script>
 </body>
 </html>

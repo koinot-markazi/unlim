@@ -2813,11 +2813,15 @@ body .height {
 }
 
 .unlim-search {
-  padding: 5px 15px;
+  padding: 5px 15px 5px 30px;
   border-radius: 30px;
-  background-color: #b30000;
+  background-color: #DF0000;
   color: #FFF;
   border: none;
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: 10px 10px;
 }
 
 .unlim-search::-webkit-input-placeholder {
@@ -2844,30 +2848,21 @@ body .height {
   top: 20%;
 }
 
-.carousel-caption .red-element {
-  display: inline;
-  width: 20%;
+.carousel-caption .carousel-title .red-element {
+  float: left;
+  width: 60px;
   height: 5px;
   background-color: #FF0000;
-  float: left;
   padding-bottom: 0px;
 }
 
-.carousel-caption h1 {
-  width: 50%;
-  float: right;
+.carousel-caption .carousel-title h1 {
+  margin-top: 10px;
+  float: left;
   position: relative;
   font-size: 52px;
   text-align: left;
   font-weight: 600;
-}
-
-.carousel-caption h1 ::before {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 5px;
-  background-color: #FF0000;
 }
 
 .carousel-indicators .active {
@@ -2913,6 +2908,7 @@ body .height {
   background-image: linear-gradient(#FF0000, #A40000, #830000);
   border-radius: 20px;
   padding: 30px;
+  overflow: hidden;
   -webkit-transition: all 0.1s 0.1s ease;
   -o-transition: all 0.1s 0.1s ease;
   transition: all 0.1s 0.1s ease;
@@ -2930,19 +2926,19 @@ body .height {
 
 .content-1-plan-title {
   position: absolute;
-  right: 0;
+  right: 15px;
   display: block;
   float: right;
   color: #ffffff;
   border: 1px solid #FFF;
-  padding: 10px 45px 10px 15px;
+  padding: 10px 35px 10px 15px;
   border-radius: 30px 0 0 30px;
-  font-size: 20px;
+  font-size: 16px;
   font-style: italic;
 }
 
 .content-1-plan-size {
-  font-size: 153px;
+  font-size: 120px;
   text-align: center;
   font-weight: 600;
   color: #FFF;
@@ -2951,7 +2947,7 @@ body .height {
 }
 
 .content-1-plan-size span {
-  font-size: 122px;
+  font-size: 80px;
 }
 
 .content-1-plan .white-line {
@@ -2963,7 +2959,7 @@ body .height {
 }
 
 .content-1-plan-price {
-  font-size: 28px;
+  font-size: 24px;
   color: #FFF;
   font-weight: 600;
   text-align: center;
@@ -3100,7 +3096,7 @@ body .height {
   color: #FF0000;
 }
 
-.content-1 .h2a a {
+.content-1 .h2a .link {
   color: #FF0000;
   border: 3px solid #FF0000;
   border-radius: 30px;
@@ -3108,12 +3104,13 @@ body .height {
   width: 170px;
   text-align: center;
   font-weight: bold;
+  cursor: pointer;
   -webkit-transition: all 0.1s 0.1s ease;
   -o-transition: all 0.1s 0.1s ease;
   transition: all 0.1s 0.1s ease;
 }
 
-.content-1 .h2a a:hover {
+.content-1 .h2a .link:hover {
   background-color: #FF0000;
   color: #FFF;
   text-decoration: none;
@@ -3219,11 +3216,6 @@ body .height {
           filter: grayscale(1);
 }
 
-.img-filter:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
-}
-
 .img-filter-headline {
   font-size: 18px;
   font-weight: 600;
@@ -3276,6 +3268,10 @@ body .height {
   margin: auto;
   display: block;
   width: 50%;
+}
+
+.instruction {
+  display: none;
 }
 
 b,

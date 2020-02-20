@@ -29,7 +29,7 @@
 <body>
 
 	<!-- Custom HTML -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-red">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-red sticky-top">
 		<div class="container">
 			
 			<a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt=""></a>
@@ -38,7 +38,7 @@
 			</button>
 		
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
+			<ul class="navbar-nav mr-auto mt-4">
 				<li class="nav-item active">
 				<a class="nav-link" href="#">WORLDWIDE DATA <span class="sr-only">(current)</span></a>
 				</li>
@@ -49,10 +49,10 @@
 				<a class="nav-link" href="#">MAP COVERAGE</a>
 				</li>
 			</ul>
-			<form class="form-inline my-2 my-lg-0">
+			<form class="form-inline my-2 mt-lg-3">
 				<input class="unlim-search mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 			</form>
-			<ul class="navbar-nav mr-auto">
+			<ul class="navbar-nav mr-auto mt-4">
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  $ US
@@ -159,12 +159,7 @@
 							<p>included <span class="round-red">75</span> countries</p>
 						</div>
 						<div class="item">
-							<select name="" id="" class="form-control">
-								<option value="" disabled selected>Enter or choose Gb</option>
-								<option value="">1 Gb</option>
-								<option value="">3 Gb</option>
-								<option value="">5 Gb</option>
-							</select>
+							<input type="number" min="0" class="form-control tarif" placeholder="Enter or choose Gb">
 						</div>
 						<div class="item">
 							<p class="text-red">$ <span class="big-price">646</span> <span class="text-dark">us/month</span></p>
