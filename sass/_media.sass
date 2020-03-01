@@ -8,14 +8,18 @@
 
 // ≥992px
 +media-breakpoint-down(md)
-
+    .carousel-caption
+        .carousel-title
+            h1
+                font-size: 36px
 // ≥768px
 +media-breakpoint-down(sm)
     .carousel-caption
-        h1
-            font-size: 11px
+        .carousel-title
+            h1
+                font-size: 36px
             .red-element
-                height: 1px
+                height: 5px
     .ptw
         flex-direction: column	
         .item
@@ -25,10 +29,41 @@
     .ordered-block
         -webkit-box-ordinal-group: 14
         order: 13
+    .user
+        .d-flex
+            flex-direction: column
+.buy-link-red
+	font-size: 18px
 
 // ≥576px
 +media-breakpoint-down(xs)
-
+    .navbar-brand
+        img
+            width: 100px
+    .carousel-caption
+        top: 0
+        .carousel-title
+            h1
+                font-size: 18px
+    .content-1-plan-title
+        margin-top: 15px
+    .content-1-plan-size
+        font-size: 90px
+        span
+            font-size: 60px
+    .content-1-plan-price
+        font-size: 18px
+        span
+            font-size: 24px
+    .content-1-plan
+        .unlim-px-5
+            padding: 0
+    .h2a
+        .d-flex
+            flex-direction: column
+            .link
+                display: block
+                width: 100%
 
 /*==========  Mobile First  ==========*/
 

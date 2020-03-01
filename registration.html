@@ -108,7 +108,7 @@
             <div class="col-xl-12 col-lg-12 col-md-12 col-12">
                 <div class="title">
                     <div class="red-line mx-auto mt-5"></div>
-                    <h4 class="title-heading text-center"> <b> Placing your order</b></h4>
+                    <h4 class="title-heading text-center"> <b> Registration</b></h4>
                 </div>
             </div>
         </div>
@@ -116,19 +116,21 @@
             <div class="offset-xl-2 offset-lg-2 offset-md-2 col-xl-8 col-lg-8 col-md-8 col-12">
                 <form action="" class="form-group form-check">
                     <p>Contact information</p>
-                    <input type="email" class="form-control my-2" id="email" placeholder="email" required data-validate>
+                    <input type="email" class="form-control my-2" id="email" placeholder="* email" required data-validate>
                     <p class="mt-4">Billing information</p>
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" id="f_name" placeholder="First name" required data-validate>
+                            <input type="text" class="form-control" id="f_name" placeholder="* First name" required data-validate>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" id="l_name" placeholder="Last name" required data-validate>
+                            <input type="text" class="form-control" id="l_name" placeholder="* Last name" required data-validate>
                         </div>
                      </div>
-                     <input type="text" class="form-control my-2" id="address" placeholder="Address" required data-validate>
-                     <input type="text" class="form-control my-2" id="address_detail" placeholder="Apartment, suite, etc." required data-validate>
-                     <input type="text" class="form-control my-2" id="city" placeholder="City" required data-validate>
+                     <input type="password" class="form-control my-2" id="pass" placeholder="* Password" required data-validate>
+                     <input type="password" class="form-control my-2" id="conf-pass" placeholder="* Confirm password" required data-validate>
+                     <input type="text" class="form-control my-2" id="address" placeholder="Address" data-validate>
+                     <input type="text" class="form-control my-2" id="address_detail" placeholder="Apartment, suite, etc." data-validate>
+                     <input type="text" class="form-control my-2" id="city" placeholder="* City" required data-validate>
                      <div class="row">
                          <div class="col">
                             <select name="" id="" class="form-control">
@@ -141,30 +143,11 @@
                              <input type="text" class="form-control" id="post_code" placeholder="Post code" required data-validate>
                          </div>
                      </div>
-                     <input type="text" class="form-control my-2" id="phone_number" placeholder="Phone number" id="phoneNumber" required data-validate>
-                     <div class="form-check">
-
-                         <input type="checkbox" class="form-check-input" id="checker">
-                         <label for="checker" class="form-check-label text-secondary">Save this information for the next time</label>
-                        </div>
-				<div class="img-filter w-100 mt-5">
-				<div class="row">
-						<div class="col-xl-3 col-lg-3 col-md-3 col-3">
-							<img src="img/icons/plan-red.svg" alt="" class="w-100">
-						</div>
-						<div class="col-xl-9 col-lg-9 col-md-9 col-12">
-							<span class="red-line"></span>
-							<h3 class="img-filter-headline">1 GB Worldwide data (1 per/30 days) <span>$ <span> 216</span> us/month</span> </h3>
-							<div class="d-flex mt-3">
-								<a href="" class="mx-2"><img src="img/icons/apple.svg" alt=""></a>
-								<a href="" class="mx-2"><img src="img/icons/mc.svg" alt=""></a>
-								<a href="" class="mx-2"><img src="img/icons/visa.svg" alt=""></a>
-								<a href="" class="mx-2"><img src="img/icons/gpay.svg" alt=""></a>
-							</div>
-						</div>
-					</div>
+                     <input type="text" class="form-control my-2" placeholder="Phone number" id="phoneNumber" required data-validate>
+                    <p class="red-text">Please fill in the fields with asterisks</p>
+				<div class="w-100">
 					<div class="row">
-						<input type="submit" class="buy-link-red ml-auto" value="Continue to payment">
+						<input type="submit" class="buy-link-red mx-auto" value="Complete">
 						<!-- <a href="#" class="buy-link-red ml-auto">Continue to payment</a> -->
 					</div>
 				</form>
@@ -213,39 +196,5 @@
 		</div>
 	</div>
 	<script src="js/scripts.min.js"></script>
-	<script>
-
-		var full = false;
-
-		$('.form-check').on("change", function(){
-			var form = $(this);
-			var field = [];
-			form.find('input[data-validate]').each(function(){
-				field.push('input[data-validate]');
-				var value = $(this).val(),
-					line = $(this).closest('.some-form__line');
-
-				for(var i = 0; i < field.length; i++){
-					if(!value){
-						full = false;
-					}
-					else{
-						full = true;
-					}
-				}
-				if(full){
-					$('.img-filter').css('filter', 'grayscale(0)')
-					$('.img-filter').css('opacity', '1')
-				}
-				else{
-					$('.img-filter').css('filter', 'grayscale(1)')
-					$('.img-filter').css('opacity', '0.5')
-				}
-			})
-		})
-
-
-				
-	</script>
 </body>
 </html>
