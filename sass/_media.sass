@@ -12,6 +12,28 @@
         .carousel-title
             h1
                 font-size: 36px
+    .map
+        &-filter
+            .d-flex
+                flex-direction: column
+                input
+                    width: 100%
+                select
+                    width: 100%
+                    float: left
+                a
+                    display: block
+                    text-align: center
+        &-country
+            flex-direction: column
+            &-list
+                width: 50%
+                float: left
+                li
+                    text-align: center
+                    width: 100%
+                    display: block
+
 // ≥768px
 +media-breakpoint-down(sm)
     .carousel-caption

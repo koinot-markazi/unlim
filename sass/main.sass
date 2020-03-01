@@ -76,7 +76,7 @@ body
 
 .search-block
 	position: fixed
-	left: 100vw
+	left: 100%
 	// right: 0
 	top: 0
 	width: 100%
@@ -563,6 +563,62 @@ body
 	bottom: 5px
 	span
 		font-size: 35px!important
+
+.map
+	&-filter
+		.d-flex
+			flex-direction: row
+		&-input
+			border-radius: 50px
+			border: 1px solid #707070
+			padding: 13px 17px
+			font-size: 14px
+			&::placeholder
+				color: #707070
+		.w-380
+			width: 380px
+		.w-160
+			width: 160px
+		.text-big
+			font-size: 40px
+		.f-22
+			font-size: 22px
+		.outlined-btn
+			border: 2px solid $accent
+			color: $accent
+			padding: 3px 43px
+			border-radius: 15px
+			&:hover
+				text-decoration: none
+				color: #FFF 
+				background-color: $accent
+		.f-31
+			font-size: 31px
+		.lh-0
+			line-height: 1
+	&-country
+		flex-direction: row
+		&-list
+			list-style: none
+			padding-left: 0
+			display: block
+			width: 20%
+			li
+				color: #000
+				margin-top: 10px
+				margin-bottom: 10px
+				font-size: 14px
+				padding: 5px 40px 5px 20px
+				cursor: pointer
+				text-transform: uppercase
+				&:hover
+					background-color: #B9B9B9
+			.active
+				background-color: rgba($accent, 0.19)
+				color: $accent
+				font-weight: 600
+				&:hover
+					background-color: rgba($accent, 0.19)
 
 b, strong
 	font-weight: bold
