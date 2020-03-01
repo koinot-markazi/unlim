@@ -23,7 +23,6 @@
 	<!-- Custom Browsers Color End -->
 
 	<link rel="stylesheet" href="css/main.min.css">
-	<script src="https://unpkg.com/imask"></script>
 
 </head>
 
@@ -120,21 +119,21 @@
                         <input type="text" class="map-filter-input w-380" placeholder="Enter the Name of the Country or Select It below" id="chosen_country" disabled>
                     </div>
                     <div class="flex-item my-2">
-                        <select name="" id="" class="map-filter-input w-160">
-                            <option value="">1Gb</option>
-                            <option value="">2Gb</option>
-                            <option value="">3Gb</option>
+                        <select name="" id="packet" class="map-filter-input w-160">
+                            <option value="1">1Gb</option>
+                            <option value="2">2Gb</option>
+                            <option value="3">3Gb</option>
                         </select>
                     </div>
                     <div class="flex-item my-2">
-                        <select name="" id="" class="map-filter-input w-160">
-                            <option value="">1per/30</option>
-                            <option value="">1per/60</option>
-                            <option value="">1per/90</option>
+                        <select name="" id="period" class="map-filter-input w-160">
+                            <option value="1">1per/30</option>
+                            <option value="2">1per/60</option>
+                            <option value="3">1per/90</option>
                         </select>
                     </div>
                     <div class="flex-item">
-                        <p class="red-text f-22 font-italic font-semibold lh-0">$<span class="text-big">0</span> <span class="text-secondary font-weight-normal">us/month</span></p>
+                        <p class="red-text f-22 font-italic font-semibold lh-0">$<span class="text-big" id="changed-price">0</span> <span class="text-secondary font-weight-normal">us/month</span></p>
                     </div>
                     <div class="flex-item">
                         <a href="" class="outlined-btn f-31 font-semibold">BUY</a>
@@ -291,6 +290,21 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/scripts.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script>
+        var packet = 1;
+        var period = 1;
+        var basicPrice = 259;
+
+        $('#packet').on("change", function(){
+            packet = $(this).val();
+            $('#changed-price').html(packet*period*basicPrice)
+        })
+        $('#period').on("change", function(){
+            period = $(this).val();
+            $('#changed-price').html(packet*period*basicPrice)
+        })
+        $('#changed-price').html(packet*period*basicPrice)
+    </script>
 </body>
 </html>

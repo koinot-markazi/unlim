@@ -41,6 +41,8 @@ body
 		width: 100%
 .bg-red
 	background-color: $accent
+
+// ==== NAVIGATION ====
 .nav-link
 	color: #fff!important
 	font-size: 12px
@@ -74,6 +76,7 @@ body
 .search-btn
 	cursor: pointer
 
+// ==== SEARCH BLOCK ====
 .search-block
 	position: fixed
 	left: 100%
@@ -117,6 +120,8 @@ body
 				padding: 5px 15px
 				font-weight: bold
 
+// ==== CAROUSEL ====
+
 .carousel-caption
 	top: 20%
 	.carousel-title
@@ -136,6 +141,7 @@ body
 .carousel-indicators
 	.active
 		background-color: $accent
+
 .text-center
 	text-align: center
 
@@ -346,13 +352,14 @@ body
 		font-size: 36px
 .strike
 	// float: left
+	margin-top: 25px
 	&::before
 		position: absolute
-		left: 0
-		width: 180px
+		// left: 0
+		width: 170px
 		content: ""
 		height: 2px
-		margin-top: 40px
+		margin-top: 35px
 		background-color: #000
 		transform: rotate(10deg)
 .buy-link-red
@@ -620,6 +627,49 @@ body
 				&:hover
 					background-color: rgba($accent, 0.19)
 
+.login
+	background-image: url('../img/bg.jpg')
+	background-position: center
+	background-size: cover
+	&-logo
+		margin: auto
+		margin-top: 50%
+		width: 40%
+		display: block
+	&-form-block
+		margin-top: 35%
+		min-height: 300px
+		background-color: rgba(#FFF, 0.9)
+		border-radius: 20px
+		box-shadow: 0 3px 6px rgba(#000, 0.16)
+		padding: 40px
+		form
+			.form-control
+				border-radius: 15px
+			p
+				font-size: 16px
+				padding-left: 15px
+				display: inline
+				margin-top: 10px
+				font-weight: 600
+				color: #707070
+			.login-form-block-submit
+				display: block
+				margin: auto
+				background-color: #fff
+				border: 1px solid #707070
+				padding: 10px 54px
+				border-radius: 15px
+				margin-top: 37px
+				&:hover
+					background-color: $accent
+					color: #FFF
+.rounded-input
+	border-radius: 30px!important
+.f-16
+	font-size: 16px
+.f-30
+	font-size: 30px
 b, strong
 	font-weight: bold
 
